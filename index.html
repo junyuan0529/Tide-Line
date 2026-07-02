@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>停浪線計畫 Tide Line</title>
+    <meta name="description" content="一場關於教育的實驗行動——這次，我們將主動權交還給學生。以「玩」的姿態，透過跨體制共創面對焦慮與迷茫。">
+    <!-- 引入 Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'page-bg': '#F1F2DE',
+                        'card-bg': '#FCFBF8',
+                        'brand-blue': '#204C8E',
+                        'brand-text': '#2C2821',
+                        'brand-gray': '#666666'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                        serif: ['"Noto Serif TC"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; }
+        .font-serif-title { font-family: 'Noto Serif TC', serif; }
+        
+        /* 隱藏 details 預設的箭頭並加上自訂動畫 */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-page-bg text-brand-text antialiased selection:bg-brand-blue selection:text-white pb-20">
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-12 space-y-12">
+        
+        <!-- Hero 區塊 -->
+        <section class="bg-card-bg rounded-2xl shadow-sm p-8 sm:p-12 flex flex-col items-center text-center space-y-6">
+            <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:2000/https://cdn.gamma.app/fa2agfpopklx6yo/486867e3d93c45c78b0f3cea226dcb90/original/Logo-Tou-Ming-2.png" alt="停浪線計畫 Logo" class="w-full max-w-[400px] h-auto object-contain mb-4">
+            
+            <h1 class="font-serif-title text-4xl sm:text-5xl font-bold text-brand-blue">停浪線計畫 Tide Line</h1>
+            <p class="text-lg text-brand-text leading-relaxed max-w-2xl">
+                一場關於教育的實驗行動——這次，我們將主動權交還給學生。以「玩」的姿態，透過跨體制共創面對焦慮與迷茫，在快速變動的世界中找回生活品味，看見彼此最真實的樣貌。
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 pt-4 w-full justify-center">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSepuJiZShmdcq8QpGgVnMXtw6csF9n3bxCpwX1_H3Ya-3vdFw/viewform?pli=1" target="_blank" class="px-8 py-3 bg-brand-blue text-white rounded-md font-medium hover:bg-blue-800 transition-colors inline-block w-full sm:w-auto">
+                    立即報名參與
+                </a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScidhVzqEfywpXQnwuek4qtsDvXUmMOwZwCVXLDwKZDfboBOA/viewform" target="_blank" class="px-8 py-3 border-2 border-brand-blue text-brand-blue rounded-md font-medium hover:bg-blue-50 transition-colors inline-block w-full sm:w-auto">
+                    贊助計畫
+                </a>
+            </div>
+        </section>
+
+        <!-- 關於計畫 -->
+        <section class="bg-card-bg rounded-2xl shadow-sm p-8 sm:p-12 space-y-8">
+            <div>
+                <span class="inline-block bg-brand-blue text-white px-3 py-1 text-sm font-bold rounded mb-4">關於計畫</span>
+                <h2 class="font-serif-title text-3xl font-bold text-brand-blue">從「玩」開始，找回學習的本質</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-page-bg p-6 rounded-xl">
+                    <h3 class="font-bold text-lg mb-2">跨體制共創</h3>
+                    <p class="text-brand-gray text-sm leading-relaxed">打破體制藩籬，讓實驗教育與體制教育的學生真正相遇、對話、合作。</p>
+                </div>
+                <div class="bg-page-bg p-6 rounded-xl">
+                    <h3 class="font-bold text-lg mb-2">玩的核心價值</h3>
+                    <p class="text-brand-gray text-sm leading-relaxed">以「玩」的態度卸下防備，在輕鬆自在的氛圍中展現最真實的自己。</p>
+                </div>
+                <div class="bg-page-bg p-6 rounded-xl">
+                    <h3 class="font-bold text-lg mb-2">自我價值建構</h3>
+                    <p class="text-brand-gray text-sm leading-relaxed">在行動與互動中探索自我，理解自己在這個快速變動世界中的定位。</p>
+                </div>
+            </div>
+
+            <details class="bg-gray-50 rounded-xl group">
+                <summary class="cursor-pointer font-medium p-4 flex items-center gap-2 text-brand-blue hover:bg-gray-100 rounded-xl transition-colors">
+                    <svg class="w-5 h-5 transform transition-transform group-open:rotate-90" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                    我們在幹嘛？
+                </summary>
+                <div class="p-6 pt-2 space-y-4 text-brand-gray text-sm leading-relaxed">
+                    <p>停浪線計畫的誕生，源自一群實驗教育學生的親身經驗與深刻反思。畢業踏入社會後，我們深刻體會到多元教育帶給生命的滋養——那種不被框架侷限、勇於探索未知的態度，早已成為我們面對世界的核心素養。然而，當我們與體制內的同學交流時，卻發現兩者之間橫亙著一道無形的牆：不理解、偏見，以及缺乏真正對話的空間。</p>
+                    <p>過去，跨體制的對話多以「學校機構」為單位進行，較少從「學生個體」的視角切入。我們問自己：如果讓不同教育背景的年輕人真正坐在一起，會發生什麼事？如果我們不以「學習成果」為目的，而是以「玩」的態度去相遇，能否打破那些根深柢固的框架？</p>
+                    <p>當代社會資訊爆炸，學生面對未來時更加焦慮、迷惘，這是我們共同面對的世代課題。「理解世界樣貌」與「建構自我價值」，對於學生而言至關重要，更是面對時代變革不可或缺的核心素養。停浪線計畫希望以「行動」來回應這些共同的困惑，創造一個以學生本位出發的跨體制交流場域，讓不同生命經驗者互相碰撞，在行動的過程中找尋自我價值，走出焦慮與迷惘。</p>
+                </div>
+            </details>
+        </section>
+
+        <!-- 計畫內容 -->
+        <section class="bg-card-bg rounded-2xl shadow-sm p-8 sm:p-12 space-y-8">
+            <div>
+                <span class="inline-block bg-brand-blue text-white px-3 py-1 text-sm font-bold rounded mb-4">計畫內容</span>
+                <h2 class="font-serif-title text-3xl font-bold text-brand-blue">活動基本資訊</h2>
+            </div>
+            
+            <div class="space-y-4 text-brand-text leading-relaxed">
+                <p>停浪線計畫預計透過「跨體制共創」在暑假完成一場為期兩天的跨體制交流活動。活動地點選在充滿人文底蘊的嘉義市，以「諸羅設計塾」為主要基地，並延伸至嘉義市城市各空間，讓參與者在真實的城市脈絡中進行探索與對話。選擇嘉義，不僅因為這裡有著深厚的文化積澱與友善的社區網絡，更因為這座城市本身帶有的「慢下來感受生活」的氛圍——這與停浪線計畫希望傳達的價值不謀而合。</p>
+                <p>活動預計吸引約 60 人參與（含 20 位工作人員），參與對象涵蓋高中生（含應屆畢業生）、大學生、Gap Year 計畫學生，以及所有對停浪線計畫價值理念有興趣的朋友。我們特別歡迎來自不同教育背景、不同生命經驗的年輕人加入，因為多元的視角正是這場實驗最珍貴的養分。</p>
+                <p>每位參與者繳交 600 元「共創基金」——我們希望跳脫「門票買賣」的框架，邀請大家成為這場實驗的共創者，共同投資這場極具意義的創造行動。停浪線計畫作為一場非營利性質的實驗活動，所有費用都將透明地運用於活動執行，若有經費餘額將全數捐出，落實社會共好。</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-6 border-y border-gray-200">
+                <div class="text-center space-y-2">
+                    <div class="text-4xl font-bold text-brand-blue">60</div>
+                    <div class="font-bold text-sm">總參與人數</div>
+                    <div class="text-xs text-brand-gray">含 20 位工作人員</div>
+                </div>
+                <div class="text-center space-y-2">
+                    <div class="text-4xl font-bold text-brand-blue">2</div>
+                    <div class="font-bold text-sm">活動天數</div>
+                    <div class="text-xs text-brand-gray">7/18(五)至7/19(六)</div>
+                </div>
+                <div class="text-center space-y-2">
+                    <div class="text-4xl font-bold text-brand-blue">600</div>
+                    <div class="font-bold text-sm">共創基金(元)</div>
+                    <div class="text-xs text-brand-gray">支持理念的基金</div>
+                </div>
+                <div class="text-center space-y-2">
+                    <div class="text-4xl font-bold text-brand-blue">6</div>
+                    <div class="font-bold text-sm">探索小組</div>
+                    <div class="text-xs text-brand-gray">城市探索分為6組</div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="font-bold text-brand-blue">活動日期</h4>
+                        <p class="text-sm">2026 年 7 月 18 日（六）至 7 月 19 日（日）</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-brand-blue">活動地點</h4>
+                        <p class="text-sm">諸羅設計塾、嘉義市城市各空間</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-brand-blue mb-2">活動對象</h4>
+                    <ul class="list-disc pl-5 text-sm space-y-1 text-brand-gray">
+                        <li>高中生（含應屆畢業生）</li>
+                        <li>大學生</li>
+                        <li>Gap Year 計畫學生</li>
+                        <li>對停浪線計畫價值理念有興趣者</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 目標與緣起 -->
+        <section class="bg-card-bg rounded-2xl shadow-sm p-8 sm:p-12 space-y-8">
+            <div>
+                <span class="inline-block border border-brand-blue text-brand-blue px-3 py-1 text-sm font-bold rounded mb-4">目標與緣起</span>
+                <h2 class="font-serif-title text-3xl font-bold text-brand-blue">為什麼需要停浪線？</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <div class="space-y-4">
+                    <p class="text-brand-text leading-relaxed">
+                        自實驗教育三法上路十多年，台灣實驗教育蓬勃發展，政府亦陸續推動多項青年培力與探索學習相關政策。非典型、多元化的學習途徑已逐步成為當代教育與人才培育的新趨勢。然而，多元教育的能量尚未充分轉化為社會對話的動力——體制內外之間的理解鴻溝，依然存在。
+                    </p>
+                    <details class="bg-gray-50 rounded-xl group">
+                        <summary class="cursor-pointer font-medium p-4 flex items-center gap-2 text-brand-blue hover:bg-gray-100 rounded-xl transition-colors">
+                            <svg class="w-5 h-5 transform transition-transform group-open:rotate-90" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            查看更多
+                        </summary>
+                        <div class="p-6 pt-2 space-y-4 text-brand-gray text-sm leading-relaxed">
+                            <p>停浪線計畫的發起成員，正是從實驗教育畢業、踏入社會的年輕人。我們在成長過程中受惠於多元教育的滋養，卻也親身感受到體制教育與實驗教育間的不理解與偏見。這種隔閡，不只是制度上的，更是人與人之間的。</p>
+                            <p>我們更深入看見當代學生們共同面對的世代課題：「當代社會資訊爆炸，使得學生面對未來時更加焦慮、迷惘。」在這樣的時代背景下，「理解世界樣貌」與「建構自我價值」對於學生而言至關重要，更是面對時代變革的核心素養。</p>
+                            <p>因此，停浪線計畫希望以「行動」來回應共同的世代課題。我們不只談論問題，更要創造一個真實的場域，讓不同背景的年輕人能夠真正相遇、碰撞、共創。</p>
+                        </div>
+                    </details>
+                </div>
+                
+                <div class="bg-brand-blue text-white p-8 rounded-xl shadow-inner h-full">
+                    <h4 class="font-bold text-xl mb-4">我們的核心信念</h4>
+                    <p class="text-sm leading-relaxed mb-4 text-blue-100">
+                        教育不該只是知識的傳遞，更應該是生命的相遇。當不同背景的年輕人真正坐在一起，以「玩」的態度卸下防備，那些關於未來的焦慮、關於自我的困惑，才能在真實的對話中找到出口。
+                    </p>
+                    <p class="text-sm leading-relaxed text-blue-100">
+                        停浪線計畫相信，每一個學生都是獨特的個體，都值得被看見、被聆聽。我們創造的不只是一個活動，而是一個讓不同生命經驗相互碰撞、相互滋養的場域。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 行程 Day 1 & Day 2 -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Day 1 -->
+            <div class="bg-card-bg rounded-2xl shadow-sm p-8 space-y-6">
+                <span class="inline-block border border-brand-blue text-brand-blue px-3 py-1 text-sm font-bold rounded">Day 1</span>
+                <h2 class="font-serif-title text-2xl font-bold text-brand-blue">交流晚會——對話實驗場</h2>
+                <p class="text-sm text-brand-gray leading-relaxed">
+                    第一天下午，60 位來自不同背景的年輕人將在諸羅設計塾相遇。這不是一場傳統的講座或研討會，而是一個充滿實驗精神的「對話實驗場」。我們將整個場域劃分為多個小空間，每個空間都有獨特的主題與活動形式。
+                </p>
+                
+                <!-- 垂直時間軸 -->
+                <div class="relative pl-6 border-l-2 border-brand-blue space-y-6 my-6">
+                    <div class="relative">
+                        <div class="absolute -left-[33px] bg-brand-blue text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">1</div>
+                        <h4 class="font-bold text-brand-text">15:30–16:00</h4>
+                        <p class="text-sm text-brand-gray">報到</p>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -left-[33px] bg-brand-blue text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">2</div>
+                        <h4 class="font-bold text-brand-text">16:00–20:00</h4>
+                        <p class="text-sm text-brand-gray">晚會正式進行（娛樂破冰・主題交流・展覽共創）</p>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -left-[33px] bg-brand-blue text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">3</div>
+                        <h4 class="font-bold text-brand-text">20:00–21:00</h4>
+                        <p class="text-sm text-brand-gray">結束、解散</p>
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="border border-blue-200 rounded-lg p-4 border-l-4 border-l-brand-blue">
+                        <h4 class="font-bold text-brand-blue text-sm mb-1">娛樂破冰</h4>
+                        <p class="text-xs text-brand-gray">開場破冰、講幹話大賽、八卦算命攤——讓笑聲成為最自然的破冰劑。</p>
+                    </div>
+                    <div class="border border-blue-200 rounded-lg p-4 border-l-4 border-l-brand-blue">
+                        <h4 class="font-bold text-brand-blue text-sm mb-1">主題交流</h4>
+                        <p class="text-xs text-brand-gray">停浪線電競賽、議題沙龍、學生舞台——在共同興趣中找到深度對話的入口。</p>
+                    </div>
+                    <div class="border border-blue-200 rounded-lg p-4 border-l-4 border-l-brand-blue">
+                        <h4 class="font-bold text-brand-blue text-sm mb-1">展覽共創</h4>
+                        <p class="text-xs text-brand-gray">車票地圖、主視覺共創、什麼是停浪線——每個人都可以是展覽的共同作者。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="bg-card-bg rounded-2xl shadow-sm p-8 space-y-6">
+                <span class="inline-block border border-brand-blue text-brand-blue px-3 py-1 text-sm font-bold rounded">Day 2</span>
+                <h2 class="font-serif-title text-2xl font-bold text-brand-blue">城市探索——生活觀察站</h2>
+                <p class="text-sm text-brand-gray leading-relaxed">
+                    第二天，我們將整個嘉義市變成一個巨大的遊戲場。60 位參與者將分為 6 個小組，每組配有隊輔，穿梭在嘉義城市的各種空間中。這不是普通的觀光旅遊，而是一場需要感知、思考與合作才能完成的「城市探索任務」。
+                </p>
+
+                <div class="space-y-4 mt-6">
+                    <div class="bg-[#e9eff7] p-5 rounded-xl flex items-start gap-4">
+                        <div class="w-10 h-10 bg-brand-blue text-white rounded-full flex items-center justify-center flex-shrink-0">📍</div>
+                        <div>
+                            <h4 class="font-bold text-brand-blue">城市空間探索</h4>
+                            <p class="text-sm text-brand-gray mt-1">穿梭嘉義市各特色空間，在真實的城市脈絡中完成任務。</p>
+                        </div>
+                    </div>
+                    <div class="bg-[#e9eff7] p-5 rounded-xl flex items-start gap-4">
+                        <div class="w-10 h-10 bg-brand-blue text-white rounded-full flex items-center justify-center flex-shrink-0">🧩</div>
+                        <div>
+                            <h4 class="font-bold text-brand-blue">互動解謎任務</h4>
+                            <p class="text-sm text-brand-gray mt-1">每完成一個任務，解鎖下一關線索，逐步推進探索進程。</p>
+                        </div>
+                    </div>
+                    <div class="bg-[#e9eff7] p-5 rounded-xl flex items-start gap-4">
+                        <div class="w-10 h-10 bg-brand-blue text-white rounded-full flex items-center justify-center flex-shrink-0">👥</div>
+                        <div>
+                            <h4 class="font-bold text-brand-blue">團隊協作共創</h4>
+                            <p class="text-sm text-brand-gray mt-1">6 組隊伍相互競爭又相互學習，在合作中展現多元視角。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <details class="bg-gray-50 rounded-xl group mt-4">
+                    <summary class="cursor-pointer font-medium p-4 flex items-center gap-2 text-brand-blue hover:bg-gray-100 rounded-xl transition-colors">
+                        <svg class="w-5 h-5 transform transition-transform group-open:rotate-90" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                        查看探索細節
+                    </summary>
+                    <div class="p-6 pt-2 space-y-4 text-brand-gray text-sm leading-relaxed">
+                        <p>每支隊伍將透過解鎖互動任務、上傳審核、解謎下一關的方式，逐步推進探索進程。任務的設計融合了對城市空間的觀察、對生活細節的感知，以及團隊協作的能力。</p>
+                        <p>城市探索的最終，所有小組將匯聚完成終極任務，並進行社群共創與交流頒獎。這一天的體驗，將是兩天活動中最具挑戰性、也最能體現「跨體制共創」精神的環節。</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- 預期效益 & 資源規劃 -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-card-bg rounded-2xl shadow-sm p-8 space-y-6">
+                <span class="inline-block bg-brand-blue text-white px-3 py-1 text-sm font-bold rounded">預期效益</span>
+                <h2 class="font-serif-title text-2xl font-bold text-brand-blue">我們期待創造什麼改變？</h2>
+                <div class="flex gap-4">
+                    <div class="flex-1 bg-page-bg p-4 rounded-xl text-center">
+                        <div class="text-3xl font-bold text-brand-blue">60</div>
+                        <div class="text-sm font-bold mt-1">直接參與人數</div>
+                    </div>
+                    <div class="flex-1 bg-page-bg p-4 rounded-xl text-center">
+                        <div class="text-3xl font-bold text-brand-blue">2000+</div>
+                        <div class="text-sm font-bold mt-1">宣傳觸及人次</div>
+                    </div>
+                </div>
+                <p class="text-sm text-brand-gray leading-relaxed">
+                    除了可量化的指標，更重要的效益在於無形的積累。我們將彙整活動籌辦與執行的完整紀錄，作為多元教育的實務案例。
+                </p>
+                <ul class="space-y-3 mt-4">
+                    <li class="flex items-start gap-2">
+                        <span class="text-brand-blue mt-1">➔</span>
+                        <div>
+                            <h4 class="font-bold text-sm text-brand-text">建立跨體制對話的實踐模式</h4>
+                            <p class="text-xs text-brand-gray">摸索出一套以學生本位出發的方法論。</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-brand-blue mt-1">➔</span>
+                        <div>
+                            <h4 class="font-bold text-sm text-brand-text">積累多元教育實務案例</h4>
+                            <p class="text-xs text-brand-gray">供教育界參考運用。</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-brand-blue mt-1">➔</span>
+                        <div>
+                            <h4 class="font-bold text-sm text-brand-text">擴大計畫理念的影響力</h4>
+                            <p class="text-xs text-brand-gray">透過宣傳與社群傳播，讓更多人認識停浪線價值。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-card-bg rounded-2xl shadow-sm p-8 space-y-6">
+                <span class="inline-block border border-brand-blue text-brand-blue px-3 py-1 text-sm font-bold rounded">資源規劃</span>
+                <h2 class="font-serif-title text-2xl font-bold text-brand-blue">共創基金與資源運用</h2>
+                
+                <div class="space-y-4">
+                    <div class="bg-brand-blue text-white p-6 rounded-xl">
+                        <h4 class="font-bold mb-2">什麼是共創基金？</h4>
+                        <p class="text-sm text-blue-100 leading-relaxed mb-3">
+                            停浪線計畫是一場非營利實驗，參與者繳交的 600 元定義為支持理念的「共創基金」，宣告：「我是這場實驗的共同創造者。」
+                        </p>
+                        <p class="text-xs text-blue-200">
+                            總預算預計為 27,500 元（總規模 45,500 元，部分透過贊助減免）。
+                        </p>
+                    </div>
+
+                    <div class="bg-page-bg p-6 rounded-xl">
+                        <h4 class="font-bold mb-3 text-brand-blue">經費運用原則</h4>
+                        <ul class="list-disc pl-5 text-sm space-y-2 text-brand-gray">
+                            <li><strong class="text-brand-text">透明公開</strong>：所有經費運用將向參與者公開。</li>
+                            <li><strong class="text-brand-text">非營利性質</strong>：不以營利為目的，全用於活動。</li>
+                            <li><strong class="text-brand-text">社會共好</strong>：若有經費餘額將全數捐出。</li>
+                            <li><strong class="text-brand-text">資源最大化</strong>：透過贊助降低參與者負擔。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer / CTA -->
+        <footer class="text-center pt-8 pb-4">
+            <h2 class="font-serif-title text-2xl font-bold text-brand-blue mb-6">三個行動主軸，一個共同信念</h2>
+            <div class="flex justify-center gap-4">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSepuJiZShmdcq8QpGgVnMXtw6csF9n3bxCpwX1_H3Ya-3vdFw/viewform?pli=1" target="_blank" class="px-8 py-3 bg-brand-blue text-white rounded-md font-medium hover:bg-blue-800 transition-colors">
+                    立即報名參與
+                </a>
+            </div>
+            <p class="text-sm text-brand-gray mt-8">© 2026 停浪線計畫 Tide Line. All rights reserved.</p>
+        </footer>
+
+    </div>
+</body>
+</html>
